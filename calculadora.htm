@@ -16,6 +16,14 @@
       function vaciar(){
         document.getElementById("n1").value="";
       }
+      function raiz(){
+        var num = document.getElementById("n1");
+        if (isNaN(num.value)){
+          num.value="Error";
+        }else{
+          num.value = Math.sqrt(num.value);
+        }
+      }
     </script>
   </head>
   <body>
@@ -25,6 +33,7 @@
       </p>
       <p><div class="calculadora botonera">
         <button id="cuadrado" onClick="cuadrado()">x<sup>2</sup></button>
+        <button id="raiz" onClick="raiz()">sqrt(x)</button>
       </p>
     </div>
   </body>
