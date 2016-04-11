@@ -24,6 +24,14 @@
           num.value = Math.sqrt(num.value);
         }
       }
+      function cubo(){
+        var num = document.getElementById("n1");
+        if (isNaN(num.value)){
+          num.value="Error";
+        }else{
+          num.value = num.value*num.value*num.value;
+        }
+      }
     </script>
   </head>
   <body>
@@ -34,6 +42,7 @@
       <p><div class="calculadora botonera">
         <button id="cuadrado" onClick="cuadrado()">x<sup>2</sup></button>
         <button id="raiz" onClick="raiz()">sqrt(x)</button>
+        <button id="cubo" onClick="cubo()">x<sup>3</sup></button>
       </p>
     </div>
   </body>
