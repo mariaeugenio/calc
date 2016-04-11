@@ -5,6 +5,25 @@
     <title>Ejemplo</title>
     <meta charset="utf-8">
     <script type="text/javascript">
+      function cuadrado(){
+        var num = document.getElementById("n1");
+        if (isNaN(num.value)){
+          num.value="Error";
+        }else{
+          num.value = num.value*num.value;
+        }
+      }
+      function vaciar(){
+        document.getElementById("n1").value="";
+      }
+      function raiz(){
+        var num = document.getElementById("n1");
+        if (isNaN(num.value)){
+          num.value="Error";
+        }else{
+          num.value = Math.sqrt(num.value);
+        }
+      }
       function cubo(){
         var num = document.getElementById("n1");
         if (isNaN(num.value)){
@@ -12,9 +31,6 @@
         }else{
           num.value = num.value*num.value*num.value;
         }
-      }
-      function vaciar(){
-        document.getElementById("n1").value="";
       }
     </script>
   </head>
@@ -24,6 +40,8 @@
       <p>Número: <input type ="text" id="n1" onClick="vaciar()">
       </p>
       <p><div class="calculadora botonera">
+        <button id="cuadrado" onClick="cuadrado()">x<sup>2</sup></button>
+        <button id="raiz" onClick="raiz()">sqrt(x)</button>
         <button id="cubo" onClick="cubo()">x<sup>3</sup></button>
       </p>
     </div>
